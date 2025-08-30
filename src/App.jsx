@@ -6,7 +6,7 @@ import dayjs from 'dayjs'
 import './App.css'
 
 function App() {
-  const [chatMessages, setChatMessages] = useState([]);
+  const [chatMessages, setChatMessages] = useState(JSON.parse(localStorage.getItem('messages')) || []);
   useEffect(()=>{
     Chatbot.addResponses({
       'goodmorning': 'Good Morning,I hope you are well',
@@ -22,7 +22,12 @@ function App() {
         return `Sure! time is: ${dayjs().format("DD MMM YYYY, dddd, HH:mm a")}`
       }
     })
-  })
+  },[])
+
+  
+  useEffect(() => {
+    localStorage.setItem('messages', JSON.stringify(chatMessages));
+  }, [chatMessages]);
 
       return (
         <div className="app-container">

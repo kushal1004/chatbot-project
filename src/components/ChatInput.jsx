@@ -62,6 +62,10 @@ export function ChatInput({ setChatMessages, chatMessages }) {
           setInputText('');
         }
       }
+
+      function clearMessages(){
+        setChatMessages([])
+      }
       return (
         <div className="chat-input-container">
           <input
@@ -74,6 +78,9 @@ export function ChatInput({ setChatMessages, chatMessages }) {
           />
           <button onClick={sendMessage} className='js-button'>
             Send
+          </button>
+          <button onClick={clearMessages} className ='clear-button'>
+            Clear
           </button>
         </div>
       );

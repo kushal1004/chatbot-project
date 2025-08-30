@@ -1,0 +1,29 @@
+.js-button {
+      background-color: green;
+      border: none;
+      color: aliceblue;
+      padding: 12px 15px;
+      border-radius: 15px;
+      margin-left: 10px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    .chat-input {
+      padding: 12px 15px;
+      border-radius: 10px;
+      border-width: 1px;
+      font-size: 18px;
+
+      flex-grow: 1;
+    }
+
+    .chat-input-container {
+      display: flex;
+      margin-bottom: 30px;
+    }
+
+    .loading-spinner {
+      height: 30px;
+      margin: -15px;
+    }
